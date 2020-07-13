@@ -1,7 +1,7 @@
 ![image](http://pool.bitcoinn.biz/bitcoin-nova.png)
 
 #### Master Build Status
-[![Build Status](https://travis-ci.org/BitcoinNova/bitcoinnova.svg?branch=master)](https://travis-ci.org/BitcoinNova/bitcoinnova) [![Build status](https://ci.appveyor.com/api/projects/status/8h9wfaw6h5s153pb?svg=true)](https://ci.appveyor.com/project/IB313184/bitcoinnova-0-18-1)
+[![Build Status](https://travis-ci.org/IB313184/Bitcoinnova-0.18.1.svg?branch=master)](https://travis-ci.org/IB313184/Bitcoinnova-0.18.1) [![Build status](https://ci.appveyor.com/api/projects/status/8h9wfaw6h5s153pb?svg=true)](https://ci.appveyor.com/project/IB313184/bitcoinnova-0-18-1)
 ### Installing
 
 We offer binary images of the latest releases here: [http://latest.bitcoinnova.org](https://github.com/BitcoinNova/bitcoinnova/releases/)
