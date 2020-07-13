@@ -91,9 +91,7 @@ install:
 - if [[ "${LABEL:0:3}" == "osx" ]]; then brew cask uninstall --force oclint || true ; fi
 
 # Need a newer version of llvm to link against to get std::filesystem / std::experimental::filesystem
-- if [[ "${LABEL:0:3}" == "osx" ]]; then travis_retry brew install llvm@8 || travis_retry brew upgrade llvm@8 ; fi
-- if [[ "${LABEL:0:3}" == "osx" ]]; then travis_retry brew link --force llvm@8 ; fi
-- if [[ "${LABEL:0:3}" == "osx" ]]; then ln -s /usr/local/opt/llvm@8 /usr/local/opt/llvm ; fi
+- if [[ "${LABEL:0:3}" == "osx" ]]; then travis_retry brew install llvm || travis_retry brew upgrade llvm ; fi
 
 # Need to make sure that we have openssl installed
 - if [[ "${LABEL:0:3}" == "osx" ]]; then travis_retry brew install openssl || travis_retry brew upgrade openssl ; fi
@@ -132,11 +130,11 @@ before_deploy:
 deploy:
   - provider: releases
     api_key:
-      secure: E0yrZe2xwaQSDeA1auskd2rdO3yok/m5XaTq+6FOvgMSC9JZ6tb4+/VQfaZNIXDrlTtb6CzsWSpjEF2VznPPc0Ek3KK93HCF01MUS1jSHo9227DzozlHdMelPJg5hRuWkIFZuK5x9uCIXpJRN/VqTDQK6TC14EqVxs4E9vmd2JJHRXVi24nL0RoTYyYTuwKgAgSCtyW5Wu9UZJrcdneHlAHs0X5DWXwt+hfSgHExuJPtNKbhFFnnRF3CE2TA2aIGydj4q0NWuSja0qIWjRP8ZFBmr6MnKV4z3Q48m+v1tgAMUxgjrebZy/48tL8cAqAUimpwyCCnnA++bAENjWnsS3H6kDMc+mM2wd5VNCroFCq8fzjHs9XfCq5KUvluTat8yIIwMzOJuMGsJgYp7AoVNouhMmiF7FURBuSnwZ+nZnDZjBiGPWvczJR1IDw1JLU4dhl7MLmqhIunqnKqafl6+mD637CXG+LU97e1xeO46221zQSosIEejYTxkTDFGR0AJ4F7rmVF9+vemsc6VbBZoZeNcyT2rWhN58aekJUbCidRiExqkZv8tlYO2yobmMkWhv66s/NzXElKImj4HuY+wDlj2rN/aHrjadA06v2iI4V8VQoTzQLzy2Iei0uLIO8Pbn6t8OlwpMeGdhP4/P/jnF374Pf69Yjj9o7VPUvSwJM=
+      secure: X39CcZqsQAFwm9gbDzNgPfr4kZZJ61MWvWQ2ks3ubKdENH8G0vWi+bOtC1DPwxofS+zovg10n7UIYBF1BrPrHW/nYTIseAJdemWBAiakuR+10HxN+m6B3DLrC11gntD0VgR2ezshqs80Vhfhf6UwnJOBdSgd9XsBTRw+PQIeDijfCsPgRHMDwNTr6+fsIysR/8cEVvkpCY71U+ZFVJq3AsDZMlqx6etiM+HW8b9k9Qbr3WjhfWbBvve917YnhoFSWb2YphGTHUZJ1xbBMcbdk96H/5IiV3lUjkpj6QCBWD9waTC5Rr03D0lc4FoGgFvvfLQ+mkMLbTp966DwdodC87PtlnIsZdAus9Mmso+QWIPc7GlX5rO/R+dLV2lTHFl7FzvUkurzEvLBcj5Pwsk9PEkPbWk3VomORazdAA5NJd6vk5plUaQFR/c39YDcynum9cbfe0/ODSmqBx9go35dITmHKIJmdupc8oJ/a2L+eqdlsL9/c0SE7yz7adIWa2ChHYRIwLQ4qQ2toBO+uq5UTlpldVkPLyAFSp0WpO6kVs/qL8raeyBeAkHu0WQ2nPXPSIc0qkdekdYebvigA3GoemXI9xB5P0fiHqvdr2860QsZAvEDcbKPP0pDDQodngb0FuZaZ0M+G+mNDCsCa8xG86118/qjQGxCzgyu5fXSER8=
     file:
       - bitcoinnova-${TRAVIS_TAG}-${LABEL}.tar.gz
     skip_cleanup: true
     on:
-      repo: BitcoinNova/bitcoinnova
+      repo: IB313184/Bitcoinnova-0.18.1
       tags: true
       condition: "$_DEPLOYABLE = true"

@@ -13,6 +13,9 @@ init:
 before_build:
   - clcache -s
 
+install:
+  - ps: Write-Host "Checking for Boost 1.69.0 x64...";$boostdir  = Test-Path $Env:BOOST_ROOT;If ($boostdir -eq $False) {Write-Host "Downloading Boost 1.69.0 x64...";$exePath = "$Env:TEMP\boost_1_69_0-msvc-14.1-64.exe";(New-Object Net.WebClient).DownloadFile('https://bintray.com/boostorg/release/download_file?file_path=1.69.0%2Fbinaries%2Fboost_1_69_0-msvc-14.1-64.exe', $exePath);Write-Host "Installing Boost 1.69.0 x64...";cmd /c start /wait "$exePath" /verysilent;del $exePath};Write-Host "Boost 1.69.0 x64 installed!" -ForegroundColor Green
+
 build_script:
   - md build
   - cd build
@@ -39,8 +42,8 @@ deploy:
     tag: $(APPVEYOR_REPO_TAG_NAME)
     release: $(APPVEYOR_REPO_TAG_NAME)
     auth_token:
-      secure: r7Vjf/6ZJqMnmvJg+Wa1WPgkTODBCzEbcLkywN3DA0zmIheeqlYVtCyCX1fwkf0z
-    repository: BitcoinNova/bitcoinnova
+      secure: Et6vQSczqAYwxWaphlKbymjIB3d16tJIwEHXAjxcxDMBxF+HM4bNQEuBIlEzYfU8
+    repository: IB313184/Bitcoinnova-0.18.1
     artifact: BitcoinNovaRelease
     draft: false
     force_update: true
