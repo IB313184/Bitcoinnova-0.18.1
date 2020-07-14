@@ -35,7 +35,7 @@ namespace CryptoNote
         }
     }
 
-    void serializeGlobalOutputIndex(ISerializer &s, uint32_t &globalOutputIndex, Common::StringView name)
+    void serializeGlobalOutputIndex(ISerializer& s, uint32_t& globalOutputIndex, Common::StringView name)
     {
         serializeBlockHeight(s, globalOutputIndex, name);
     }
