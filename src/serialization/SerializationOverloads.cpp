@@ -9,7 +9,7 @@
 
 namespace CryptoNote
 {
-    void serializeBlockHeight(ISerializer &s, uint32_t &blockHeight, Common::StringView name)
+    void serializeBlockHeight(ISerializer &s, uint32_t&blockHeight, Common::StringView name)
     {
         if (s.type() == ISerializer::INPUT)
         {
