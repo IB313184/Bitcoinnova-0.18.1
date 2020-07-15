@@ -293,7 +293,7 @@ namespace CryptoNote
  	    "mn7.bitcoinnova.org:45227",    
  	    "mn8.bitcoinnova.org:45228",    
  	    "mn9.bitcoinnova.org:45229",        // Node9 Raspberry(01) 
- 	    "mn10.bitcoinnova.org:45230",       // Node5 VPS(mn10) 
+ 	    "mn10.bitcoinnova.org:45230",       // Node10 VPS(mn10) 
  	    "mn11.bitcoinnova.org:11111",    
  	    "mn12.bitcoinnova.org:11112",   
  	    "mn13.bitcoinnova.org:11113",    
