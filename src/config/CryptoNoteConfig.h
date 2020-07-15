@@ -279,11 +279,38 @@ namespace CryptoNote
         {0xa9, 0x44, 0x04, 0x22, 0x45, 0xdb, 0x11, 0x03, 0x38, 0xbd, 0x93, 0x13, 0x41, 0x32, 0xbd, 0x04}};
 
     const char *const SEED_NODES[] = {
-        "85.214.158.156:45222",            // Nodo-1 pool.bitcoinnova.org
-        "mn9.bitcoinnova.org:45222",       // Node-9 mn9.bitcoinnova.org
-        "149.202.44.54:45222",             // Node-8 (149.202.44.54)
-        "81.169.166.154:45222",            // Node-7 (81.169.166.154)
-        "ecologicalbtn.con-ip.com:45222",  // Node-3 ecologicalbtn.con-ip.com
-        "superblockchain.con-ip.com:45222" // Node-3 superblockchain.con-ip.com 
+        "85.214.158.156:45222",             // Nodo1 pool.bitcoinnova.org
+        "81.169.166.154:45222",             // Node7 (81.169.166.154)
+        "149.202.44.54:45222",              // Node8 (149.202.44.54)
+        "superblockchain.con-ip.com:45222", // Node5 superblockchain.con-ip.com  
+        "ecologicalbtn.con-ip.com:44222",   // Node6 (ecologicalbtn.con-ip.com)
+        "mn1.bitcoinnova.org:45222",    
+        "mn2.bitcoinnova.org:45222",   
+        "mn3.bitcoinnova.org:45222",    
+        "mn4.bitcoinnova.org:45222",    
+        "mn5.bitcoinnova.org:45222",    
+        "mn6.bitcoinnova.org:45222",    
+        "mn7.bitcoinnova.org:45222",    
+        "mn8.bitcoinnova.org:45222",    
+        "mn9.bitcoinnova.org:45222",    
+        "mn10.bitcoinnova.org:11101",    
+        "mn11.bitcoinnova.org:11102",    
+        "mn12.bitcoinnova.org:11103",   
+        "mn13.bitcoinnova.org:11104",    
+        "mn14.bitcoinnova.org:11105",    
+        "mn15.bitcoinnova.org:11106",    
+        "mn16.bitcoinnova.org:11107",    
+        "mn17.bitcoinnova.org:11108",    
+        "mn18.bitcoinnova.org:11108",    
+        "mn19.bitcoinnova.org:11109",    
+        "mn20.bitcoinnova.org:11110",    
+        "btn1.bitcoinnova.org:10111",   
+        "btn2.bitcoinnova.org:10112",    
+        "btn3.bitcoinnova.org:10113",    
+        "btn4.bitcoinnova.org:10114",    
+        "btn5.bitcoinnova.org:10115",    
+        "btn6.bitcoinnova.org:10116",    
+        "btn7.bitcoinnova.org:10117",    
+        "btn8.bitcoinnova.org:10118" 
     };
 } // namespace CryptoNote
