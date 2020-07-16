@@ -282,10 +282,10 @@ namespace CryptoNote
 	    "85.214.158.156:45222",             // Nodo1 pool.bitcoinnova.org
  	    "81.169.166.154:45222",             // Node7 (81.169.166.154)
  	    "149.202.44.54:45222",              // Node8 (149.202.44.54)
- 	    "superblockchain.con-ip.com:45222", // Node5 superblockchain.con-ip.com  
+ 	    "superblockchain.con-ip.com:45222", // Node3 superblockchain.con-ip.com  
  	    "ecologicalbtn.con-ip.com:44222",   // Node6 (ecologicalbtn.con-ip.com)
  	    "mn1.bitcoinnova.org:45222",    
- 	    "mn2.bitcoinnova.org:45224",        // Node3 VPS(mn2)
+ 	    "mn2.bitcoinnova.org:45224",        // Node2 VPS(mn2)
  	    "mn3.bitcoinnova.org:45223",    
  	    "mn4.bitcoinnova.org:45234",        // Node4 VPS(mn4)
  	    "mn5.bitcoinnova.org:45225",        // Node5 VPS(mn5)
