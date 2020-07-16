@@ -287,7 +287,7 @@ namespace CryptoNote
  	    "mn1.bitcoinnova.org:45222",    
  	    "mn2.bitcoinnova.org:45224",        // Node3 VPS(mn2)
  	    "mn3.bitcoinnova.org:45223",    
- 	    "mn4.bitcoinnova.org:45224",    
+ 	    "mn4.bitcoinnova.org:45234",        // Node4 VPS(mn4)
  	    "mn5.bitcoinnova.org:45225",        // Node5 VPS(mn5)
  	    "mn6.bitcoinnova.org:45226",    
  	    "mn7.bitcoinnova.org:45227",    
