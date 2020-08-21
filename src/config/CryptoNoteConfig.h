@@ -39,7 +39,7 @@ namespace CryptoNote
 
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
         const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
-        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
+        const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 712160;
 
         const unsigned EMISSION_SPEED_FACTOR                         = 18;
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
@@ -55,7 +55,7 @@ namespace CryptoNote
         /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
            You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp
            to import from when the block height cannot be found in the node or the node is offline. */
-        const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
+        const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1508958688;
 
         const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW                 = 100;
         const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE       = 100000; // size of block (bytes) after which reward for block calculated using block size
@@ -81,7 +81,7 @@ namespace CryptoNote
         /* The heights to activate the mixin limits at */
         const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 440000;
         const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 620000;
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 800000;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 712160;
 
         /* The mixin to use by default with zedwallet and turtle-service */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -94,7 +94,7 @@ namespace CryptoNote
         const uint64_t DEFAULT_DUST_THRESHOLD_V2                     = UINT64_C(0);
 
         const uint32_t DUST_THRESHOLD_V2_HEIGHT                      = MIXIN_LIMITS_V2_HEIGHT;
-        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 800000;
+        const uint32_t FUSION_DUST_THRESHOLD_HEIGHT_V2               = 712160;
         const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 
         const size_t DIFFICULTY_WINDOW                               = 17;
@@ -116,14 +116,14 @@ namespace CryptoNote
         const uint64_t MAX_BLOCK_SIZE_GROWTH_SPEED_DENOMINATOR       = 365 * 24 * 60 * 60 / DIFFICULTY_TARGET;
         const uint64_t MAX_EXTRA_SIZE                                = 140000;
         const uint64_t MAX_EXTRA_SIZE_V2                             = 1024;
-        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 1300000;
+        const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 712210;
 
         /* For new projects forked from this code base, the values immediately below
            should be changed to 0 to prevent issues with transaction processing
            and other possible unexpected behavior */
-        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 1400000;
-        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT               = 1600000;
-        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 1600000;
+        const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 712220;
+        const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT               = 712230;
+        const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 712230;
 
         /* This describes how many blocks of "wiggle" room transactions have regarding
            when the outputs can be spent based on a reasonable belief that the outputs
@@ -140,10 +140,10 @@ namespace CryptoNote
         const size_t FUSION_TX_MIN_IN_OUT_COUNT_RATIO                = 4;
 
         const uint32_t UPGRADE_HEIGHT_V2                             = 1;
-        const uint32_t UPGRADE_HEIGHT_V3                             = 2;
+        const uint32_t UPGRADE_HEIGHT_V3                             = 30;
         const uint32_t UPGRADE_HEIGHT_V4                             = 350000; // Upgrade height for CN-Lite Variant 1 switch.
-        const uint32_t UPGRADE_HEIGHT_V5                             = 1200000; // Upgrade height for CN-Turtle Variant 2 switch.
-        const uint32_t UPGRADE_HEIGHT_V6                             = 1800000; // Upgrade height for Chukwa switch.
+        const uint32_t UPGRADE_HEIGHT_V5                             = 712200; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V6                             = 712250; // Upgrade height for Chukwa switch.
         const uint32_t UPGRADE_HEIGHT_CURRENT                        = UPGRADE_HEIGHT_V6;
 
         /* This value is here to handle the difficult reset needed for the PoW upgrade
@@ -165,13 +165,13 @@ namespace CryptoNote
             440000, // 2
             620000, // 3
             700000, // 4
-            800000, // 5
-            1000000, // 6
-            1200000, // 7
-            1300000, // 8
-            1400000, // 9
-            1600000, // 10
-            1800000, // 11
+            712160, // 5
+            712161, // 6
+            712200, // 7
+            712210, // 8
+            712220, // 9
+            712230, // 10
+            712250, // 11
             2000000, // 12
             2200000, // 13
             2400000, // 14
@@ -181,7 +181,7 @@ namespace CryptoNote
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 4;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX                 = 11;
 
         const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
@@ -244,8 +244,8 @@ namespace CryptoNote
 
     // P2P Network Configuration Section - This defines our current P2P network version
     // and the minimum version for communication between nodes
-    const uint8_t P2P_CURRENT_VERSION                            = 5;
-    const uint8_t P2P_MINIMUM_VERSION                            = 2;
+    const uint8_t P2P_CURRENT_VERSION                            = 6;
+    const uint8_t P2P_MINIMUM_VERSION                            = 6;
 
     // This defines the minimum P2P version required for lite blocks propogation
     const uint8_t P2P_LITE_BLOCKS_PROPOGATION_VERSION            = 4;
@@ -266,10 +266,10 @@ namespace CryptoNote
     const size_t P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT            = 5000; // 5 seconds
     const char P2P_STAT_TRUSTED_PUB_KEY[]                        = "";
 
-    const uint64_t DATABASE_WRITE_BUFFER_MB_DEFAULT_SIZE         = 256; // 1 GB
-    const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10; // 1 GB
-    const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100; // 500 files
-    const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2; // 10 DB threads
+    const uint64_t DATABASE_WRITE_BUFFER_MB_DEFAULT_SIZE         = 1024; // 1 GB
+    const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 1024; // 1 GB
+    const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 500; // 500 files
+    const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 10; // 10 DB threads
 
     const char LATEST_VERSION_URL[]                              = "http://bitcoinnova.org";
 
